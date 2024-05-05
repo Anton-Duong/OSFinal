@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <EditText
+    android:id="@+id/idEdtBillName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:hint="Enter Bill Name" />
+
+  <EditText
+    android:id="@+id/idEdtBillCost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_below="@id/idEdtBillName"
+    android:hint="Enter Bill Cost" />
+
+  <EditText
+    android:id="@+id/idEdtBillDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_below="@id/idEdtBillCost"
+    android:hint="Enter Bill Date" />
+
+  <EditText
+    android:id="@+id/idEdtBillDescription"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/idEdtBillDate"
+    android:layout_margin="10dp"
+    android:layout_marginTop="171dp"
+    android:layout_marginBottom="10dp"
+    android:hint="Enter Bill Description" />
+
+  <Button
+    android:id="@+id/idBtnAddBill"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:text="Add Bill"
+    android:textAllCaps="false"
+    android:layout_below="@id/idEdtBillDescription" />
+
+  <ImageButton
+    android:id="@+id/backButton"
+    android:layout_width="75dp"
+    android:layout_height="73dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerInside"
+    app:srcCompat="@drawable/abck"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_margin="10dp" />
+
+</RelativeLayout>
