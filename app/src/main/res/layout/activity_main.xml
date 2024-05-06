@@ -1,105 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/main"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".MainActivity"
-  tools:layout_editor_absoluteX="-67dp"
-  tools:layout_editor_absoluteY="-115dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-67dp"
+    tools:layout_editor_absoluteY="-115dp">
 
 
   <ImageButton
-    android:id="@+id/rentButton"
-    android:layout_width="104dp"
-    android:layout_height="108dp"
-    android:layout_marginStart="150dp"
-    android:layout_marginEnd="157dp"
-    android:layout_marginBottom="229dp"
-    android:adjustViewBounds="true"
-    android:scaleType="centerInside"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:srcCompat="@drawable/bill_icon" />
+      android:id="@+id/rentButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginEnd="14dp"
+      android:layout_marginBottom="23dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerInside"
+      app:layout_constraintBottom_toBottomOf="@+id/textView4"
+      app:layout_constraintEnd_toStartOf="@+id/goingOutButton"
+      app:layout_constraintStart_toEndOf="@+id/travelButton"
+      app:layout_constraintTop_toBottomOf="@+id/textView2"
+      app:srcCompat="@drawable/bill_icon" />
 
   <ImageButton
-    android:id="@+id/groceryButton"
-    android:layout_width="141dp"
-    android:layout_height="154dp"
-    android:layout_marginStart="3dp"
-    android:layout_marginEnd="267dp"
-    android:layout_marginBottom="35dp"
-    android:adjustViewBounds="true"
-    android:scaleType="centerInside"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:srcCompat="@drawable/dall_e_2024_05_03_15_16_55___a_cartoon_image_representing_the_concept_of__groceries__with_stick_figures__it_features_a_vibrant_market_scene_with_stick_figures_shopping_for_groceri" />
+      android:id="@+id/groceryButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="21dp"
+      android:layout_marginEnd="21dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerInside"
+      app:layout_constraintBottom_toBottomOf="@+id/savingsButton"
+      app:layout_constraintEnd_toEndOf="@+id/textView2"
+      app:layout_constraintStart_toStartOf="@+id/textView"
+      app:layout_constraintTop_toTopOf="@+id/savingsButton"
+      app:srcCompat="@drawable/dall_e_2024_05_03_15_16_55___a_cartoon_image_representing_the_concept_of__groceries__with_stick_figures__it_features_a_vibrant_market_scene_with_stick_figures_shopping_for_groceri" />
 
   <ImageButton
-    android:id="@+id/goingOutButton"
-    android:layout_width="138dp"
-    android:layout_height="159dp"
-    android:layout_marginEnd="3dp"
-    android:layout_marginBottom="203dp"
-    android:adjustViewBounds="true"
-    android:scaleType="centerInside"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:srcCompat="@drawable/dall_e_2024_05_03_15_16_58___a_cartoon_image_depicting_the_theme__going_out__with_stick_figures__the_scene_shows_stick_figures_dressed_in_simple_lines_as_casual_evening_wear__step" />
-
-  <ImageButton
-    android:id="@+id/savingsButton"
-    android:layout_width="141dp"
-    android:layout_height="159dp"
-    android:layout_marginStart="270dp"
-    android:layout_marginBottom="30dp"
-    android:adjustViewBounds="true"
-    android:scaleType="centerInside"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:srcCompat="@drawable/dall_e_2024_05_03_15_17_21___a_cartoon_image_illustrating_the_theme__savings__with_stick_figures__it_shows_stick_figures__drawn_with_simple_lines__joyfully_throwing_simple_circle_" />
-
-  <ImageButton
-    android:id="@+id/travelButton"
-    android:layout_width="140dp"
-    android:layout_height="159dp"
-    android:layout_marginBottom="203dp"
-    android:adjustViewBounds="true"
-    android:scaleType="centerInside"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:srcCompat="@drawable/dall_e_2024_05_03_15_22_17___a_cartoon_image_depicting__travel__with_stick_figures__it_features_stick_figures_of_different_shapes__with_luggage_depicted_as_simple_rectangles__stan" />
-
-  <Spinner
-    android:id="@+id/categorySpinner"
-    android:layout_width="411dp"
-    android:layout_height="wrap_content"
-    android:entries="@array/category_options"
-    app:layout_constraintTop_toTopOf="parent" />
+      android:id="@+id/goingOutButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginEnd="6dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerInside"
+      app:layout_constraintBottom_toBottomOf="@+id/rentButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/rentButton"
+      app:layout_constraintTop_toTopOf="@+id/rentButton"
+      app:srcCompat="@drawable/dall_e_2024_05_03_15_16_58___a_cartoon_image_depicting_the_theme__going_out__with_stick_figures__the_scene_shows_stick_figures_dressed_in_simple_lines_as_casual_evening_wear__step" />
 
   <!-- Button for showing data -->
+
+  <ImageButton
+      android:id="@+id/savingsButton"
+      android:layout_width="136dp"
+      android:layout_height="142dp"
+      android:layout_marginStart="50dp"
+      android:layout_marginTop="159dp"
+      android:layout_marginEnd="51dp"
+      android:layout_marginBottom="158dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerInside"
+      app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
+      app:layout_constraintEnd_toEndOf="@+id/goingOutButton"
+      app:layout_constraintStart_toStartOf="@+id/editTextText2"
+      app:layout_constraintTop_toTopOf="@+id/goingOutButton"
+      app:srcCompat="@drawable/dall_e_2024_05_03_15_17_21___a_cartoon_image_illustrating_the_theme__savings__with_stick_figures__it_shows_stick_figures__drawn_with_simple_lines__joyfully_throwing_simple_circle_" />
+
+  <ImageButton
+      android:id="@+id/travelButton"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginEnd="18dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerInside"
+      app:layout_constraintBottom_toBottomOf="@+id/rentButton"
+      app:layout_constraintEnd_toStartOf="@+id/rentButton"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/rentButton"
+      app:srcCompat="@drawable/dall_e_2024_05_03_15_22_17___a_cartoon_image_depicting__travel__with_stick_figures__it_features_stick_figures_of_different_shapes__with_luggage_depicted_as_simple_rectangles__stan" />
+
+  <Spinner
+      android:id="@+id/categorySpinner"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="165dp"
+      android:entries="@array/category_options"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/resultTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="Results will appear here."
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/showDataButton" />
+
   <Button
-    android:id="@+id/showDataButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="148dp"
-    android:layout_marginTop="24dp"
-    android:layout_marginEnd="147dp"
-    android:text="Show Data"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+      android:id="@+id/showDataButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:text="Show Data"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/categorySpinner" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="31dp"
+      android:layout_marginBottom="15dp"
+      android:text="Travel"
+      app:layout_constraintBottom_toTopOf="@+id/travelButton"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="29dp"
+      android:text="Bills"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="15dp"
+      android:text="Rent"
+      app:layout_constraintBottom_toTopOf="@+id/goingOutButton"
+      app:layout_constraintEnd_toEndOf="@+id/goingOutButton"
+      app:layout_constraintStart_toStartOf="@+id/goingOutButton" />
+
+  <TextView
+      android:id="@+id/textView4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="195dp"
+      android:text="Groceries"
+      app:layout_constraintEnd_toEndOf="@+id/travelButton"
+      app:layout_constraintStart_toEndOf="@+id/travelButton"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/textView5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:text="Savings"
+      app:layout_constraintEnd_toStartOf="@+id/goingOutButton"
+      app:layout_constraintStart_toStartOf="@+id/goingOutButton"
+      app:layout_constraintTop_toBottomOf="@+id/goingOutButton" />
+
+  <EditText
+      android:id="@+id/editTextText"
+      android:layout_width="170dp"
+      android:layout_height="45dp"
+      android:layout_marginTop="154dp"
+      android:layout_marginBottom="152dp"
+      android:ems="10"
+      android:inputType="text"
+      android:text="Pick Your Category"
+      app:layout_constraintBottom_toTopOf="@+id/showDataButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/savingsButton" />
+
+  <EditText
+      android:id="@+id/editTextText2"
+      android:layout_width="75dp"
+      android:layout_height="46dp"
+      android:layout_marginBottom="20dp"
+      android:ems="10"
+      android:inputType="text"
+      android:text="Results"
+      app:layout_constraintBottom_toTopOf="@+id/categorySpinner"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
 
   <!-- TextView for displaying results -->
-  <TextView
-    android:id="@+id/resultTextView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="72dp"
-    android:text="Results will appear here."
-    app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
