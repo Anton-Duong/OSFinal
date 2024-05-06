@@ -14,57 +14,92 @@
     android:id="@+id/rentButton"
     android:layout_width="104dp"
     android:layout_height="108dp"
+    android:layout_marginStart="150dp"
+    android:layout_marginEnd="157dp"
     android:layout_marginBottom="229dp"
     android:adjustViewBounds="true"
     android:scaleType="centerInside"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:srcCompat="@drawable/bill_icon"
-    tools:layout_editor_absoluteX="150dp" />
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/bill_icon" />
 
   <ImageButton
     android:id="@+id/groceryButton"
     android:layout_width="141dp"
     android:layout_height="154dp"
     android:layout_marginStart="3dp"
+    android:layout_marginEnd="267dp"
+    android:layout_marginBottom="35dp"
     android:adjustViewBounds="true"
     android:scaleType="centerInside"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:srcCompat="@drawable/dall_e_2024_05_03_15_16_55___a_cartoon_image_representing_the_concept_of__groceries__with_stick_figures__it_features_a_vibrant_market_scene_with_stick_figures_shopping_for_groceri"
-    tools:layout_editor_absoluteY="471dp" />
+    app:srcCompat="@drawable/dall_e_2024_05_03_15_16_55___a_cartoon_image_representing_the_concept_of__groceries__with_stick_figures__it_features_a_vibrant_market_scene_with_stick_figures_shopping_for_groceri" />
 
   <ImageButton
     android:id="@+id/goingOutButton"
     android:layout_width="138dp"
     android:layout_height="159dp"
-    android:layout_marginTop="269dp"
-    android:layout_marginEnd="6dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginBottom="203dp"
     android:adjustViewBounds="true"
     android:scaleType="centerInside"
+    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
     app:srcCompat="@drawable/dall_e_2024_05_03_15_16_58___a_cartoon_image_depicting_the_theme__going_out__with_stick_figures__the_scene_shows_stick_figures_dressed_in_simple_lines_as_casual_evening_wear__step" />
 
   <ImageButton
     android:id="@+id/savingsButton"
     android:layout_width="141dp"
     android:layout_height="159dp"
-    android:layout_marginEnd="6dp"
+    android:layout_marginStart="270dp"
+    android:layout_marginBottom="30dp"
     android:adjustViewBounds="true"
     android:scaleType="centerInside"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:srcCompat="@drawable/dall_e_2024_05_03_15_17_21___a_cartoon_image_illustrating_the_theme__savings__with_stick_figures__it_shows_stick_figures__drawn_with_simple_lines__joyfully_throwing_simple_circle_"
-    tools:layout_editor_absoluteY="466dp" />
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/dall_e_2024_05_03_15_17_21___a_cartoon_image_illustrating_the_theme__savings__with_stick_figures__it_shows_stick_figures__drawn_with_simple_lines__joyfully_throwing_simple_circle_" />
 
   <ImageButton
     android:id="@+id/travelButton"
     android:layout_width="140dp"
     android:layout_height="159dp"
-    android:layout_marginStart="3dp"
-    android:layout_marginTop="269dp"
+    android:layout_marginBottom="203dp"
     android:adjustViewBounds="true"
     android:scaleType="centerInside"
+    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
     app:srcCompat="@drawable/dall_e_2024_05_03_15_22_17___a_cartoon_image_depicting__travel__with_stick_figures__it_features_stick_figures_of_different_shapes__with_luggage_depicted_as_simple_rectangles__stan" />
+
+  <Spinner
+    android:id="@+id/categorySpinner"
+    android:layout_width="411dp"
+    android:layout_height="wrap_content"
+    android:entries="@array/category_options"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- Button for showing data -->
+  <Button
+    android:id="@+id/showDataButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="148dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="147dp"
+    android:text="Show Data"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- TextView for displaying results -->
+  <TextView
+    android:id="@+id/resultTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="72dp"
+    android:text="Results will appear here."
+    app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

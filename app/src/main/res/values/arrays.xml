@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="category_options">
+    <item>All</item> <!-- This allows users to select all categories -->
+    <item>Rent</item>
+    <item>Travel</item>
+    <item>Savings</item>
+    <item>Groceries</item>
+    <item>Miscellaneous</item>
+  </string-array>
+</resources>

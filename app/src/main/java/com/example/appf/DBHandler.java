@@ -1,10 +1,13 @@
 package com.example.appf;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class DBHandler extends SQLiteOpenHelper  {
   private static final String DB_NAME = "budgetdb";
@@ -82,6 +85,25 @@ public class DBHandler extends SQLiteOpenHelper  {
     // this method is called to check if the table exists already.
     db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     onCreate(db);
+  }
+
+  public List<String> getPurchasesByCategory(String category) {
+    List<String> results = new ArrayList<>();
+    SQLiteDatabase db = this.getReadableDatabase();
+    Cursor cursor;
+    if (category.equals("All")) {
+      cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+    } else {
+      cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + CATEGORY_COL + "=?", new String[]{category});
+    }
+    while (cursor.moveToNext()) {
+      results.add(cursor.getString(cursor.getColumnIndex(NAME_COL)) + " - " +
+        cursor.getInt(cursor.getColumnIndex(COST_COL)) + " on " +
+        new Date(cursor.getLong(cursor.getColumnIndex(DATE_COL))).toString());
+    }
+    cursor.close();
+    db.close();
+    return results;
   }
 
 }
