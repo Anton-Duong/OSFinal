@@ -48,26 +48,14 @@ public class GroceriesActivity extends AppCompatActivity {
         String GroceriesName = idEdtGroceriesName.getText().toString();
         int GroceriesCost = Integer.parseInt(idEdtGroceriesCost.getText().toString());
         String GroceriesDate = idEdtGroceriesDate.getText().toString();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-        Date date = null;
-        try {
-          date = dateFormat.parse(GroceriesDate);
-        } catch (ParseException e) {
-          // Handle the possibility that the string was not in the expected format
-          e.printStackTrace();
-          Toast.makeText(GroceriesActivity.this, "Invalid date format. Please use dd-MM-yyyy.", Toast.LENGTH_LONG).show();
-        }
+
         String GroceriesDescription = idEdtGroceriesDescription.getText().toString();
 
-        // validating if the text fields are empty or not.
-        if (GroceriesName.isEmpty() && GroceriesDate.isEmpty() && GroceriesDescription.isEmpty()) {
-          Toast.makeText(GroceriesActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
-          return;
-        }
+
 
         // on below line we are calling a method to add new
         // course to sqlite data and pass all our values to it.
-        dbHandler.addNewCol(GroceriesName, GroceriesCost, GroceriesDescription, "Groceries", date);
+        dbHandler.addNewCol(GroceriesName, GroceriesCost, GroceriesDescription, "Groceries", GroceriesDate);
 
         // after adding the data we are displaying a toast message.
         Toast.makeText(GroceriesActivity.this, "Groceries has been added.", Toast.LENGTH_SHORT).show();

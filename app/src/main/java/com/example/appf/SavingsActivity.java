@@ -50,25 +50,14 @@ public class SavingsActivity extends AppCompatActivity {
         int SavingsCost = Integer.parseInt(idEdtSavingsCost.getText().toString());
         String SavingsDate = idEdtSavingsDate.getText().toString();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-        Date date = null;
-        try {
-          date = dateFormat.parse(SavingsDate);
-        } catch (ParseException e) {
-          // Handle the possibility that the string was not in the expected format
-          e.printStackTrace();
-          Toast.makeText(SavingsActivity.this, "Invalid date format. Please use dd-MM-yyyy.", Toast.LENGTH_LONG).show();
-        }
+
         String SavingsDescription = idEdtSavingsDescription.getText().toString();
 
-        // validating if the text fields are empty or not.
-        if (SavingsName.isEmpty() && SavingsDate.isEmpty() && SavingsDescription.isEmpty()) {
-          Toast.makeText(SavingsActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
-          return;
-        }
+
 
         // on below line we are calling a method to add new
         // course to sqlite data and pass all our values to it.
-        dbHandler.addNewCol(SavingsName, SavingsCost, SavingsDescription, "Savings", date);
+        dbHandler.addNewCol(SavingsName, SavingsCost, SavingsDescription, "Savings", SavingsDate);
 
         // after adding the data we are displaying a toast message.
         Toast.makeText(SavingsActivity.this, "Savings has been added.", Toast.LENGTH_SHORT).show();

@@ -47,26 +47,13 @@ public class MiscellaneousActivity extends AppCompatActivity {
         String MiscellaneousName = idEdtMiscellaneousName.getText().toString();
         int MiscellaneousCost = Integer.parseInt(idEdtMiscellaneousCost.getText().toString());
         String MiscellaneousDate = idEdtMiscellaneousDate.getText().toString();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-        Date date = null;
-        try {
-          date = dateFormat.parse(MiscellaneousDate);
-        } catch (ParseException e) {
-          // Handle the possibility that the string was not in the expected format
-          e.printStackTrace();
-          Toast.makeText(MiscellaneousActivity.this, "Invalid date format. Please use dd-MM-yyyy.", Toast.LENGTH_LONG).show();
-        }
+
         String MiscellaneousDescription = idEdtMiscellaneousDescription.getText().toString();
 
-        // validating if the text fields are empty or not.
-        if (MiscellaneousName.isEmpty() && MiscellaneousDate.isEmpty() && MiscellaneousDescription.isEmpty()) {
-          Toast.makeText(MiscellaneousActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
-          return;
-        }
 
         // on below line we are calling a method to add new
         // course to sqlite data and pass all our values to it.
-        dbHandler.addNewCol(MiscellaneousName, MiscellaneousCost, MiscellaneousDescription, "Miscellaneous", date);
+        dbHandler.addNewCol(MiscellaneousName, MiscellaneousCost, MiscellaneousDescription, "Miscellaneous", MiscellaneousDate);
 
         // after adding the data we are displaying a toast message.
         Toast.makeText(MiscellaneousActivity.this, "Miscellaneous has been added.", Toast.LENGTH_SHORT).show();

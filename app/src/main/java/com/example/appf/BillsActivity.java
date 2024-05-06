@@ -49,26 +49,14 @@ public class BillsActivity extends AppCompatActivity {
         String billName = idEdtBillName.getText().toString();
         int billCost = Integer.parseInt(idEdtBillCost.getText().toString());
         String billDate = idEdtBillDate.getText().toString();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-        Date date = null;
-        try {
-          date = dateFormat.parse(billDate);
-        } catch (ParseException e) {
-          // Handle the possibility that the string was not in the expected format
-          e.printStackTrace();
-          Toast.makeText(BillsActivity.this, "Invalid date format. Please use dd-MM-yyyy.", Toast.LENGTH_LONG).show();
-        }
+
         String billDescription = idEdtBillDescription.getText().toString();
 
-        // validating if the text fields are empty or not.
-        if (billName.isEmpty() && billDate.isEmpty() && billDescription.isEmpty()) {
-          Toast.makeText(BillsActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
-          return;
-        }
+
 
         // on below line we are calling a method to add new
         // course to sqlite data and pass all our values to it.
-        dbHandler.addNewCol(billName, billCost, billDescription, "bill", date);
+        dbHandler.addNewCol(billName, billCost, billDescription, "bill", billDate);
 
         // after adding the data we are displaying a toast message.
         Toast.makeText(BillsActivity.this, "Bill has been added.", Toast.LENGTH_SHORT).show();

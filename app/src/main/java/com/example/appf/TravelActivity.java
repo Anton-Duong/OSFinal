@@ -49,25 +49,13 @@ public class TravelActivity extends AppCompatActivity {
         int TravelCost = Integer.parseInt(idEdtTravelCost.getText().toString());
         String TravelDate = idEdtTravelDate.getText().toString();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-        Date date = null;
-        try {
-          date = dateFormat.parse(TravelDate);
-        } catch (ParseException e) {
-          // Handle the possibility that the string was not in the expected format
-          e.printStackTrace();
-          Toast.makeText(TravelActivity.this, "Invalid date format. Please use dd-MM-yyyy.", Toast.LENGTH_LONG).show();
-        }
+
         String TravelDescription = idEdtTravelDescription.getText().toString();
 
-        // validating if the text fields are empty or not.
-        if (TravelName.isEmpty() && TravelDate.isEmpty() && TravelDescription.isEmpty()) {
-          Toast.makeText(TravelActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
-          return;
-        }
 
         // on below line we are calling a method to add new
         // course to sqlite data and pass all our values to it.
-        dbHandler.addNewCol(TravelName, TravelCost, TravelDescription, "Travel", date);
+        dbHandler.addNewCol(TravelName, TravelCost, TravelDescription, "Travel", TravelDate);
 
         // after adding the data we are displaying a toast message.
         Toast.makeText(TravelActivity.this, "Travel has been added.", Toast.LENGTH_SHORT).show();
